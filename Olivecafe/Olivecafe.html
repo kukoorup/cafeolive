@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Street Food Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Main Scrollable Content -->
+        <main class="menu-content" id="menuContent">
+            <header class="mobile-header">
+                <div class="branding-section">
+                    <div class="cafe-branding">
+                        <img src="assets/logo.png" alt="Olive Cafe" class="header-logo">
+                        <h1 class="cafe-name">Grab a pocket friendly treat</h1>
+                    </div>
+                </div>
+
+                <div class="menu-controls">
+                    <h2 class="menu-heading">Our Menu</h2>
+                    <div class="toggle-container-inline" id="topToggle">
+                        <div class="veg-toggle" id="vegToggle">
+                            <div class="toggle-bg"></div>
+                            <!-- Updated to Icons -->
+                            <span class="toggle-option active" data-type="all">ALL</span>
+                            <span class="toggle-option" data-type="veg"><img src="assets/veg.png" alt="Veg"
+                                    class="toggle-icon"></span>
+                            <span class="toggle-option" data-type="non-veg"><img src="assets/nonveg.png" alt="Non"
+                                    class="toggle-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="menuGrid" class="menu-grid">
+                <!-- Items injected by JS -->
+            </div>
+
+            <!-- Bottom Spacer for Nav -->
+            <div style="height: 80px;"></div>
+        </main>
+
+        <!-- Bottom Translucent Navigation Bar -->
+        <nav class="bottom-nav">
+            <!-- Floating Pill -->
+            <div class="nav-active-pill"></div>
+
+            <button class="nav-item active" data-category="all" title="All">
+                <i class="fa-solid fa-utensils nav-icon-fa"></i>
+                <span>All</span>
+            </button>
+            <button class="nav-item" data-category="rolls" title="Rolls">
+                <img src="assets/rolls icon.png" alt="Rolls" class="nav-icon-img">
+                <span>Rolls</span>
+            </button>
+            <button class="nav-item" data-category="burgers" title="Burgers">
+                <img src="assets/burger icon.png" alt="Burgers" class="nav-icon-img">
+                <span>Burger</span>
+            </button>
+            <button class="nav-item" data-category="sandwiches" title="Sandwiches">
+                <img src="assets/sandwich icon .png" alt="Sandwich" class="nav-icon-img">
+                <span>Sandwich</span>
+            </button>
+            <button class="nav-item" data-category="drinks" title="Milkshakes">
+                <img src="assets/shakes icon.png" alt="Shakes" class="nav-icon-img">
+                <span>Shakes</span>
+            </button>
+            <button class="nav-item" data-category="mocktails" title="Mocktails">
+                <img src="assets/mocktail icon.png" alt="Mocktails" class="nav-icon-img">
+                <span>Mocktail</span>
+            </button>
+            <button class="nav-item" data-category="icecream" title="Ice Cream">
+                <img src="assets/ice cream icon.png" alt="Ice Cream" class="nav-icon-img">
+                <span>Ice Cream</span>
+            </button>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+        </nav>
+
+        <!-- Floating Cart Button -->
+        <div class="cart-float-btn hidden" id="cartFloat">
+            <div class="cart-count digital-num">0</div>
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-label">Items</span>
+        </div>
+
+        <!-- Dim Layer -->
+        <div class="dim-layer" id="dimLayer"></div>
+
+        <!-- Cart Overlay Box -->
+        <div class="cart-overlay hidden" id="cartOverlay">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <!-- Close icon removed as requested -->
+            </div>
+            <div class="cart-items-container">
+                <!-- Cart Items Injected Here -->
+            </div>
+            <div class="cart-footer">
+                <div class="total-section">
+                    <div class="total-trigger" id="totalTrigger">
+                        Total <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="total-reveal" id="totalReveal">
+                        <span class="total-label">Your Total :</span>
+                        <span class="total-amount digital-num">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
